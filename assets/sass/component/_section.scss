@@ -1,0 +1,55 @@
+.c-sec {
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  background: inherit;
+
+  &._pad0 {
+    padding: 0;
+  }
+
+  &__content {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 92.2%;
+    max-width: 1000px;
+
+    &._visible {
+      overflow: visible;
+    }
+
+    &._smallfull {
+      width: 100%;
+      max-width: 1160px;
+    }
+
+    &._wide {
+      max-width: 1200px;
+    }
+
+    &._full {
+      width: 100%;
+      max-width: 1400px;
+    }
+  }
+
+}
+
+@include mq-up(md) {
+  .c-sec {
+    padding: 60px 0;
+
+    &__inner {
+      width: 90%;
+      max-width: 1000px;
+    }
+  }
+}

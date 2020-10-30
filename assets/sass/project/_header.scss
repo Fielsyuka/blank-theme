@@ -1,0 +1,25 @@
+.p-header {
+  background: #fff;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.1);
+
+  &__inner {
+    @include flex;
+    @include flex-middle;
+    @include flex-between;
+  }
+  &__logo {
+    width: 140px;
+  }
+  &__nav {
+    margin-right: 54px;
+    .menu > ul {
+      @include flex;
+
+      > li > a {
+        display: block;
+        padding: 20px 14px;
+      }
+    }
+    
+  }
+}

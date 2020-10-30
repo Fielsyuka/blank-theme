@@ -1,0 +1,50 @@
+// ベースカラー
+$color-base-100: #f3f3f3;
+$color-base-200: #abaeaf; 
+$color-base-300: #b89a6e; 
+$color-base-400: #937b6c;
+$color-base-500: #674e24;
+$color-base-600: #353535;
+
+
+// メインカラー
+$color-main: #102f3f;
+// $main-bg-color: #fcf8ed;
+ 
+// サブカラー
+$color-sub: #8bafc2;
+ 
+// アクセントカラー
+$color-accent: #da0d0d;
+ 
+//　カテゴリーカラー
+// $color-category-type: #c74700;
+ 
+//　無彩色
+$non-color-gray-600: #333;
+$non-color-gray-500: #797979;
+$non-color-gray-400: #a3a3a3;
+$non-color-gray-300: #d1d1d1;
+$non-color-gray-200: #eee;
+$non-color-gray-100: #f9f9f9;
+
+
+//-------------------------------------------- 
+
+//　背景
+$color-bg-base: $color-base-100 !default;
+
+// テキスト
+$color-text-base: rgb(51,51,51) !default;
+ 
+// リンク
+// $color-link: blue !default;
+// $color-actlink: blue !default;
+
+//　ボーダー
+$color-border: $color-base-200 !default;
+
+//　フォーム
+
+//　ボタン
+

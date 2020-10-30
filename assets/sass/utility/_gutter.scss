@@ -1,0 +1,26 @@
+.u-gutter {
+  margin-right: 3.9vw;
+  margin-left: 3.9vw;
+  @include mq-up(md) {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+  @include mq-up(lg) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.u-nogutter {
+  margin-right: -3.9vw;
+  margin-left: -3.9vw;
+  @include mq-up(md) {
+    margin-right: -5vw;
+    margin-left: -5vw;
+  }
+  @include mq-up(lg) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+}

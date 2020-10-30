@@ -1,0 +1,13 @@
+$breakpoint-up: (
+  'sm': '(min-width: 576px)',
+  'md': '(min-width: 768px)',
+  'lg': '(min-width: 992px)',
+  'xl': '(min-width: 1200px)',
+) !default;
+
+// $breakpoint-down: (
+//   'sm': '(max-width: 575px)',
+//   'md': '(max-width: 767px)',
+//   'lg': '(max-width: 991px)',
+//   'xl': '(max-width: 1199px)',
+// ) !default;

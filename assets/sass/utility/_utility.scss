@@ -1,0 +1,176 @@
+//clearfix
+.u-clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// indent
+.u-indent {
+  margin-left: 1em;
+  text-indent: 1em
+}
+
+//hidden
+.u-visualhidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+}
+
+
+$bps: ss, sm, md, lg, xl;
+
+@each $bp in $bps {
+  .disp-#{$bp} {
+  display: block;
+  
+    &._inline {
+      display: inline;
+    }
+
+    &._ib {
+      display: inline-block;
+    }
+  }
+}
+
+
+// ssのみで表示
+.u-disp-ss {
+  display: block;
+  
+  &._inline {
+    display: inline;
+  }
+
+  &._ib {
+    display: inline-block;
+  }
+}
+
+@include mq-up(sm) {
+  .u-disp-ss {
+    display: none;
+  }
+}
+
+// ss~smで表示
+.u-disp-sssm {
+  display: block;
+
+  &._inline {
+    display: inline;
+  }
+
+  &._ib {
+    display: inline-block;
+  }
+}
+
+@include mq-up(md) {
+  .u-disp-sssm {
+    display: none
+  }
+}
+
+// sm以上で表示
+.u-disp-sm {
+  display: none
+}
+
+@include mq-up(sm) {
+  .u-disp-sm {
+    display: block;
+
+    &._inline {
+      display: inline;
+    }
+
+    &._ib {
+      display: inline-block;
+    }
+  }
+}
+
+// ss~mdで表示
+.u-disp-ssmd {
+  display: block;
+
+  &._inline {
+    display: inline;
+  }
+
+  &._ib {
+    display: inline-block;
+  }
+}
+
+@include mq-up(lg) {
+  .u-disp-ssmd {
+    display: none
+  }
+}
+
+// md以上で表示
+.u-disp-md {
+  display: none;
+}
+
+@include mq-up(md) {
+  .u-disp-md {
+    display: block;
+
+    &._inline {
+      display: inline;
+    }
+
+    &._ib {
+      display: inline-block;
+    }
+  }
+}
+
+// LG以上で表示
+.u-disp-lg {
+  display: none
+}
+
+@include mq-up(lg) {
+  .u-disp-lg {
+    display: block;
+
+    &._inline {
+      display: inline;
+    }
+
+    &._ib {
+      display: inline-block;
+    }
+  }
+}
+
+// XL以上で表示
+.u-disp-xl {
+  display: none
+}
+
+@include mq-up(xl) {
+  .u-disp-xl {
+    display: block;
+
+    &._inline {
+      display: inline;
+    }
+
+    &._ib {
+      display: inline-block;
+    }
+  }
+}

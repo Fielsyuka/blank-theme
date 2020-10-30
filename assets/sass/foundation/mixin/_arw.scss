@@ -1,0 +1,14 @@
+@mixin arw($color:#000,$size:8px,$Bw:1px,$left:auto,$right:10px) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: $left;
+  right: $right;
+  width: $size;
+  height: $size;
+  border: 1px solid  $color;
+  border-width: 0 $Bw $Bw 0;
+  transform: rotate(-45deg) translateY(-50%);
+  transform-origin: center center;
+}

@@ -1,0 +1,98 @@
+.p-hero {
+  background: url(../images/kv_bg_pattern_sp.png) repeat center center/250px 250px;
+  
+  @include mq-up(md) {
+    background: none;
+  }
+  &__kv {
+    @include mq-up(md) {
+      background: url(../images/kv_bg.jpg) no-repeat center top/cover;  
+    }    
+  }
+  &__img01 {
+    >img:nth-of-type(2) {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  &__desc {
+    padding: 5px 0;
+    font-family: $font-accent;
+    font-size: rem(12);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.16);
+    line-height: 1.5;
+    text-align: center;
+  }
+  &__img02 {
+  }
+  &__info {
+    position: relative;
+    @include mq-up(md) {
+      margin-top: -8vw;
+      width: 100%;
+      background: url(../images/kv_info_bg.jpg) no-repeat center top/ cover;
+      z-index: 100;
+    }
+    > img:nth-of-type(1) {
+      margin-top: -14vw;
+      z-index: 10;
+    }
+    > img:nth-of-type(2) {
+      margin-top: -2vw;
+      z-index: 20;
+    }
+    > img:nth-of-type(3) {
+      margin-top: -9vw;
+      z-index: 30;
+    }
+
+    &-md {
+      display: none;
+      @include mq-up(md) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 1100px;
+        margin: -3vw auto 0;
+      }
+      >img {
+        display: block;
+        width: 100%;
+      }
+      > div:nth-of-type(1) {
+        max-width: 336px;
+        margin-top: -11vw;
+      }
+
+      > div:nth-of-type(2) {
+
+        max-width: 397px;
+            padding-bottom: 30px;
+      } 
+      > div:nth-of-type(3) {
+        max-width: 338px;
+        margin-top: -11vw;
+      }
+    }
+
+     > a {
+      position: relative;
+      display: block;
+      padding: 8px;
+      background: #102f3f;
+      color: white;
+      font-family: $font-accent;
+      text-align: center;
+      @include mq-up(md) {
+        margin-top: -10px;
+        font-size: rem(26);
+        z-index: 200;
+      }
+    }
+
+  }
+}

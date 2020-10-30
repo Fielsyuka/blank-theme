@@ -1,0 +1,32 @@
+//ベースのフォントサイズ
+$base-font-size: 16;
+
+//フォントサイズの自動計算
+@function rem($pixels, $context: $base-font-size) {
+  @return $pixels / $context * 1rem;
+}
+
+//フォント
+//@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+//【明朝】
+$mincho: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", Verdana, serif;
+
+//【ゴシック】
+$gothic: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+
+//【丸ゴシック】
+$maru-gothic: "ヒラギノ丸ゴ Pro W3","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+//【Noto Sans】
+$noto-sans: 'Noto Sans JP', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, "平成ゴシック", "メイリオ", "Meiryo", Helvetica, Arial, Verdana, "ＭＳ Ｐゴシック", "MS UI Gothic", sans-serif;
+
+//フォント設定
+$font-base: $noto-sans;
+$font-accent: $mincho;
+
+$font-code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font-pre: "Courier 10 Pitch", courier, monospace;
+
+$font-line-height-body: 1.5;
+$font-line-height-pre: 1.6;

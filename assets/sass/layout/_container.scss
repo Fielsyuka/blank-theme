@@ -1,0 +1,30 @@
+.l-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  width: 92.2%; //gutter 3.9%
+  max-width: 1000px;
+  @include mq-up(md) {
+    // width: 100%;
+
+  }
+
+  &._visible {
+    overflow: visible;
+  }
+
+  &._wide {
+    max-width: 1200px;
+  }
+
+  &._smfull {
+    width: 100%;
+
+    @include mq-up(md) {}
+  }
+
+  &._full {
+    width: 100%;
+    // max-width: 1400px;
+  }
+}
