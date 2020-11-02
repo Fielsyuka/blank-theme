@@ -53,7 +53,7 @@ function pageTop() {
 
 function hbg() {
   $(".js-hbg-btn").on("click", function() {
-    $(this).hasClass("is-active")?($(this).removeClass("is-active"), $("body").removeClass("is-menu-open"), $(".js-nav").fadeOut()): ($(this).addClass("is-active"), $("body").addClass("is-menu-open"), $(".js-nav").fadeIn())
+    $(this).hasClass("is-active")?($(this).attr('aria-expanded', false), $(this).removeClass("is-active"), $("body").removeClass("is-menu-open"), $(".js-nav").fadeOut()): ($(this).attr('aria-expanded', true), $(this).addClass("is-active"), $("body").addClass("is-menu-open"), $(".js-nav").fadeIn())
   }
   ), $(".js-link").on("click", function() {
     if (window.innerWidth < 769) $(".js-hbg-btn").removeClass("is-active"), $("body").removeClass("is-menu-open"), $(".js-nav").fadeOut()
@@ -70,3 +70,14 @@ $(window).on("resize", function(){
     $("body").removeClass("is-menu-open");
   }
 });
+
+$(function() {
+  hbg();
+  // scroll(), pageTop(), hbg(), acdAction(), 
+  // $(function() {
+  //   $('a[href="#"]').on("click", function() {
+  //     return!1
+  //   }
+  //   )
+  // });
+})

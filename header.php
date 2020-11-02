@@ -25,7 +25,7 @@
 <div id="page" class="site">
 
 	<header id="header" class="l-header p-header">
-		<div class="l-container p-header__inner">
+		<div class="l-container -wide p-header__inner">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -38,7 +38,7 @@
 				<?php
 			endif;
 			?>
-			<button type="button" id="js-buttonHamburger" class="c-button p-hamburger" aria-controls="primary-menu" aria-expanded="false">
+			<button type="button" class="c-button p-hamburger js-hbg-btn" aria-controls="primary-menu" aria-expanded="false">
 				<span class="p-hamburger__line"><span class="u-visualhidden">メニューを開閉する</span></span>
 			</button>
 			<nav id="site-navigation" class="p-header__nav">
@@ -46,7 +46,9 @@
 				wp_nav_menu(
 					array(
 						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu'
+						'menu_id'        => 'primary-menu',
+						'menu_class'      => 'menu',
+						'container' => false
 					)
 				);
 				?>

@@ -543,23 +543,34 @@ table {
   margin: 0 auto;
   width: 92.2%;
   max-width: 1000px;
-  @incluse mq-up(md) {}
 }
 
-.l-container._visible {
+.l-container.-visible {
   overflow: visible;
 }
 
-.l-container._wide {
+.l-container.-wide {
   max-width: 1200px;
 }
 
-.l-container._smfull {
+.l-container.-smfull {
   width: 100%;
 }
 
-.l-container._full {
+.l-container.-full {
   width: 100%;
+}
+
+.l-content {
+  padding-top: 30px;
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 9999;
 }
 
 /*--------------------------------------------------------------
@@ -634,6 +645,41 @@ table {
 /*--------------------------------------------------------------
 # Project
 --------------------------------------------------------------*/
+.p-entry__header {
+  position: relative;
+}
+
+.p-entry__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 0;
+  width: 52%;
+  min-width: 200px;
+}
+
+.p-entry__title > span:first-child {
+  font-size: 2.375rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.p-entry__title > span:last-child {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 2em;
+  letter-spacing: 0.02em;
+}
+
+.p-footer {
+  padding: 20px 0;
+  background: #102f3f;
+  color: #fff;
+}
+
 .p-hamburger {
   position: absolute;
   top: 0;
@@ -649,9 +695,14 @@ table {
   transition: all .3s ease-in-out;
 }
 
-.p-hamburger:hover, .p-hamburger:focus {
-  -webkit-box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+.p-hamburger:hover > .p-hamburger__line {
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.p-hamburger:hover > .p-hamburger__line::before, .p-hamburger:hover > .p-hamburger__line::after {
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .p-hamburger__line {
@@ -693,7 +744,7 @@ table {
 
 .p-hamburger[aria-expanded="true"] .p-hamburger__line::before, .p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
   top: 0;
-  background-color: #f9d8ae;
+  background-color: #102f3f;
 }
 
 .p-hamburger[aria-expanded="true"] .p-hamburger__line::before {
@@ -704,12 +755,6 @@ table {
 .p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-}
-
-.p-header {
-  background: #fff;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .p-header__inner {
@@ -732,13 +777,13 @@ table {
   margin-right: 54px;
 }
 
-.p-header__nav .menu > ul {
+.p-header__nav > .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.p-header__nav .menu > ul > li > a {
+.p-header__nav > .menu > li > a {
   display: block;
   padding: 20px 14px;
 }

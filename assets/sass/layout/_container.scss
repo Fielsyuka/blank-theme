@@ -9,21 +9,21 @@
 
   }
 
-  &._visible {
+  &.-visible {
     overflow: visible;
   }
 
-  &._wide {
+  &.-wide {
     max-width: 1200px;
   }
 
-  &._smfull {
+  &.-smfull {
     width: 100%;
 
     @include mq-up(md) {}
   }
 
-  &._full {
+  &.-full {
     width: 100%;
     // max-width: 1400px;
   }

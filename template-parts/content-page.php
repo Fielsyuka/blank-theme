@@ -8,15 +8,31 @@
  */
 
 ?>
+<?php
+  $parent_id = $post->post_parent; // 親ページのIDを取得
+  $parent_slug = get_post($parent_id)->post_name; // 親ページのスラッグを取得
+  $parent_title = get_post($parent_id)->post_title; // 親ページのタイトルを取得
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+  $page = get_post( get_the_ID() );
+  $slug = $page->post_name;
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="p-entry">
+
+	<header class="p-entry__header">
+    <picture class="p-entry__mv">
+      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $slug ?>/mv_sp.jpg" media="(max-width: 767px)">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $slug ?>/mv.jpg" alt="<?php echo $slug ?>">
+    </picture>
+    <div class="p-entry__titlewrap">
+    	<div class="l-container">
+    		<h1 class="p-entry__title"><span><?php echo mb_strtoupper($slug) ?></span><span><?php the_title(); ?></span></h1>
+    	</div>
+    </div>    
 	</header><!-- .entry-header -->
 
-	<?php theme_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="l-container l-content">
+		<div class="p-entry__content">
 		<?php
 		the_content();
 
@@ -27,28 +43,12 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
+	</div><!-- .container -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'theme' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
+		<footer class="p-entry__footer">
+
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

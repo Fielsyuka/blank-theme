@@ -28,8 +28,9 @@
 # Layout
 --------------------------------------------------------------*/
 @import "layout/container";
+@import "layout/content";
 @import "layout/header";
-// @import "layout/main";
+@import "layout/main";
 
 /*--------------------------------------------------------------
 # Component
@@ -40,6 +41,8 @@
 /*--------------------------------------------------------------
 # Project
 --------------------------------------------------------------*/
+@import "project/entry";
+@import "project/footer";
 @import "project/hamburger";
 @import "project/header";
 

@@ -9,8 +9,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="p-entry">
+	<header class="p-entry__header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="p-entry__meta">
 				<?php
 				theme_posted_on();
 				theme_posted_by();
@@ -31,7 +31,7 @@
 
 	<?php theme_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="p-entry__content">
 		<?php
 		the_content(
 			sprintf(

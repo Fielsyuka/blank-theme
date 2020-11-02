@@ -1,6 +1,4 @@
 .p-header {
-  background: #fff;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.1);
 
   &__inner {
     @include flex;
@@ -12,8 +10,8 @@
   }
   &__nav {
     margin-right: 54px;
-    .menu > ul {
-      @include flex;
+    > .menu {
+       @include flex;
 
       > li > a {
         display: block;

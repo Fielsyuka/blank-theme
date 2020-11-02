@@ -8,12 +8,20 @@
   margin: auto;
   box-shadow: 0 0 2rem transparent;
   outline: none;
-  -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 0 .5rem rgba(255, 255, 255, .5);
+  &:hover {
+    >.p-hamburger__line {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+
+      &::before,
+      &::after {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+      }
+
+    }
   }
 
   &__line {
@@ -26,7 +34,6 @@
     width: 18px;
     height: 2px;
     background-color: $color-main;
-    -webkit-transition: inherit;
     transition: inherit;
 
     &::before,
@@ -37,7 +44,6 @@
       height: 100%;
       background-color: inherit;
       content: '';
-      -webkit-transition: inherit;
       transition: inherit;
     }
 
@@ -58,18 +64,16 @@
     &::before,
     &::after {
       top: 0;
-      background-color: #f9d8ae;
+      background-color: $color-main;
     }
 
     &::before {
       -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     }
 
     &::after {
       -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
   }
