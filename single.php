@@ -1,16 +1,12 @@
 <?php
 /**
  * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package THEME
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="main" class="l-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -33,7 +29,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+	</main><!-- l-main -->
 
 <?php
 get_sidebar();

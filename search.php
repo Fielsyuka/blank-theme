@@ -1,16 +1,12 @@
 <?php
 /**
  * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package THEME
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="main" class="l-main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -46,7 +42,7 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+	</main><!-- .l-main -->
 
 <?php
 get_sidebar();

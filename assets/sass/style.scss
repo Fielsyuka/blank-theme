@@ -7,22 +7,13 @@
 --------------------------------------------- */
 @import "foundation/destyle";
 
-/* Mixin
---------------------------------------------- */
-@import 'foundation/mixin/arw';
-@import 'foundation/mixin/aspect-ratio';
-@import 'foundation/mixin/bp';
-@import 'foundation/mixin/centering';
-@import 'foundation/mixin/column';
-@import 'foundation/mixin/flex';
-@import 'foundation/mixin/none-appearance';
-@import 'foundation/mixin/placeholder-color';
-@import 'foundation/mixin/text-hidden';
-@import 'foundation/mixin/triangle';
-
 /* Base
 --------------------------------------------- */
 @import "foundation/base";
+
+/* WP-Core
+--------------------------------------------- */
+@import "foundation/wpcore";
 
 /*--------------------------------------------------------------
 # Layout
